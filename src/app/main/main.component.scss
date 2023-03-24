@@ -1,0 +1,295 @@
+$main-color:#051622;
+$second-color :#1BA098;
+$third-color:#DEB992;
+.header {
+    background-color: $second-color;
+    padding-top: 58px;
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* ------------------------------------------------ TEXT FLIP GLOABL -------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------------------------------------------------------- */
+
+.main-title h1 span:first-child {
+    display: inline-block;
+    width: 100%;
+}
+
+span.title {
+    font-weight: 550;
+}
+
+span.job-title {
+    color: $third-color;
+    font-weight: 700;
+}
+
+.main-title {
+    width: 100%;
+    font-size: 5vw;
+    color: $main-color;
+    padding-bottom: 5%;
+    margin-left: 2%;
+}
+
+.text-flip {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    color: $third-color;
+}
+
+.text-flip .flip {
+    font-weight: 550;
+}
+
+@media (max-width: 520px) {
+    .text-flip {
+        height: 43px;
+    }
+}
+
+@media (min-width: 520px) {
+    .text-flip {
+        height: 43px;
+    }
+}
+
+@media (min-width: 675px) {
+    .text-flip {
+        width: 80%;
+        top: 7px;
+        height: 55px;
+    }
+}
+
+@media (min-width: 859px) {
+    .text-flip {
+        top: 10px;
+        height: 63px;
+    }
+}
+
+@media (min-width: 936px) {
+    .text-flip {
+        height: 70px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .text-flip {
+        height: 130px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .main-title {
+        text-align: center;
+        margin-left: 0%;
+    }
+    .text-flip {
+        position: relative;
+        display: inline-flex;
+    }
+}
+
+.text-flip span {
+    position: absolute;
+    white-space: nowrap;
+    opacity: 0;
+    -webkit-animation: rotate-word 15s linear infinite;
+    animation: rotate-word 15s linear infinite;
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* ------------------------------------------------ DUREE ENTRE CHAQUE MOT -------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------------------------------------------------------- */
+
+.text-flip span:nth-child(2) {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+}
+
+.text-flip span:nth-child(3) {
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+}
+
+.text-flip span:nth-child(4) {
+    -webkit-animation-delay: 7.5s;
+    animation-delay: 7.5s;
+}
+
+.text-flip span:nth-child(5) {
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+}
+
+.text-flip span:nth-child(6) {
+    -webkit-animation-delay: 12.5s;
+    animation-delay: 12.5s;
+}
+
+@-webkit-keyframes rotate-word {
+    0% {
+        opacity: 0;
+    }
+    1% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+    17% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+    19% {
+        opacity: 0;
+    }
+    20% {
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes rotate-word {
+    0% {
+        opacity: 0;
+    }
+    1% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+    17% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+    19% {
+        opacity: 0;
+    }
+    20% {
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.flip {
+    width: 100%;
+}
+
+.flip::after {
+    content: '';
+    display: inline-block;
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+
+@media (min-width: 394px) {
+    .flip::after {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+@media (min-width: 394px) {
+    .flip::after {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (min-width: 675px) {
+    .flip::after {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (min-width: 859px) {
+    .flip::after {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (min-width: 936px) {
+    .flip::after {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .flip::after {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* ------------------------------------------- IMAGES DE CHAQUE FLIP -------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------------------------------------------------------- */
+
+.flip-angular::after {
+    background-image: url("./../../assets/icons/angular.png");
+}
+
+.flip-docker::after {
+    background-image: url("./../../assets/icons/docker.png");
+}
+
+.flip-kubernetes::after {
+    background-image: url("./../../assets/icons/kubernetes.png");
+}
+
+.flip-git::after {
+    background-image: url("./../../assets/icons/git.png");
+}
