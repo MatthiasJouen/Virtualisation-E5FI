@@ -2,14 +2,14 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: myservice
-  name: myservice
+    app: myapp
+  name: myapp
 spec:
   ports:
     - nodePort: 30945
-      port: 8080
+      port: 80
       protocol: TCP
-      targetPort: 8080
+      targetPort: 80
   selector:
-    app: myservice
+    app: myapp
   type: LoadBalancer

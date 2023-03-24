@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myservice
+  name: myapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myservice
+      app: myapp
   template:
     metadata:
       labels:
-        app: myservice
+        app: myapp
     spec:
       containers:
-        - image: efrei/myservice:1
+        - image: esieejoudioux/myapp:latest
           imagePullPolicy: IfNotPresent
-          name: myservice
+          name: myapp
       restartPolicy: Always
